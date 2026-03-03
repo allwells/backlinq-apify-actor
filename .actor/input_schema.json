@@ -1,0 +1,53 @@
+{
+    "actorInputSchemaVersion": 1,
+    "title": "Backlinq SEO Intelligence",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "endpoint": {
+            "title": "Endpoint",
+            "type": "string",
+            "description": "Which Backlinq API endpoint to call.",
+            "enum": [
+                "domain-authority",
+                "backlink-profile",
+                "referring-domains",
+                "compare-domains"
+            ],
+            "enumTitles": [
+                "Get Domain Authority",
+                "Get Backlink Profile",
+                "Get Referring Domains",
+                "Compare Domains"
+            ],
+            "default": "domain-authority",
+            "editor": "select"
+        },
+        "domain": {
+            "title": "Domain",
+            "type": "string",
+            "description": "The domain to analyze (e.g. github.com). Required for all endpoints except Compare Domains.",
+            "editor": "textfield",
+            "example": "github.com"
+        },
+        "domains": {
+            "title": "Domains (Compare only)",
+            "type": "string",
+            "description": "Comma-separated list of 2-5 domains. Only used with the Compare Domains endpoint.",
+            "editor": "textfield",
+            "example": "github.com,vercel.com,netlify.com"
+        },
+        "limit": {
+            "title": "Limit (optional)",
+            "type": "integer",
+            "description": "Number of results to return for Backlink Profile and Referring Domains endpoints. Defaults to 20.",
+            "default": 20,
+            "minimum": 1,
+            "maximum": 100,
+            "editor": "number"
+        }
+    },
+    "required": [
+        "endpoint"
+    ]
+}

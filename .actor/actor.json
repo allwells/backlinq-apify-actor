@@ -1,0 +1,52 @@
+{
+    "actorSpecification": 1,
+    "name": "backlinq-seo-intelligence",
+    "title": "Backlinq — SEO Backlink Intelligence",
+    "description": "Query domain authority, backlink profiles, referring domains, and multi-domain comparisons via the Backlinq API. Powered by Moz, Open PageRank, and Common Crawl.",
+    "version": "1.0",
+    "buildTag": "latest",
+    "environmentVariables": [],
+    "readme": "./README.md",
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": {
+            "actorSpecification": 1,
+            "title": "Backlinq Results",
+            "description": "SEO data returned by the Backlinq API for the queried domain(s).",
+            "views": {
+                "overview": {
+                    "title": "Results",
+                    "transformation": {
+                        "fields": [
+                            "endpoint",
+                            "query",
+                            "queriedAt",
+                            "result"
+                        ]
+                    },
+                    "display": {
+                        "component": "table",
+                        "properties": {
+                            "endpoint": {
+                                "label": "Endpoint",
+                                "format": "text"
+                            },
+                            "query": {
+                                "label": "Query",
+                                "format": "text"
+                            },
+                            "queriedAt": {
+                                "label": "Queried At",
+                                "format": "datetime"
+                            },
+                            "result": {
+                                "label": "Result",
+                                "format": "object"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

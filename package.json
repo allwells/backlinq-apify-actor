@@ -1,0 +1,19 @@
+{
+    "name": "backlinq-apify-actor",
+    "version": "1.0.0",
+    "description": "Apify Actor wrapping the Backlinq SEO Backlink Intelligence API",
+    "main": "dist/main.js",
+    "scripts": {
+        "start": "node dist/main.js",
+        "build": "tsc",
+        "dev": "ts-node src/main.ts"
+    },
+    "dependencies": {
+        "apify": "^3.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "typescript": "^5.0.0",
+        "ts-node": "^10.9.0"
+    }
+}
