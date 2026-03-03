@@ -1,0 +1,9 @@
+FROM apify/actor-node-typescript:20
+
+COPY package*.json ./
+RUN npm install --include=dev
+
+COPY . ./
+RUN npm run build
+
+CMD ["node", "dist/main.js"]
