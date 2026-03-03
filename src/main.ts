@@ -55,10 +55,10 @@ Actor.main(async () => {
         throw new Error(`Backlinq API error ${response.status}: ${errorText}`);
     }
 
-    const data = await response.json();
+    const data = await response.json() as Record<string, unknown>;
 
-    if (!data.success && data.error) {
-        throw new Error(`Backlinq returned an error: ${data.error}`);
+    if (!data['success'] && data['error']) {
+        throw new Error(`Backlinq returned an error: ${String(data['error'])}`);
     }
 
     await Actor.pushData({
