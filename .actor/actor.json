@@ -5,7 +5,7 @@
     "description": "Query domain authority, backlink profiles, referring domains, and multi-domain comparisons via the Backlinq API. Powered by Moz, Open PageRank, and Common Crawl.",
     "version": "1.0",
     "buildTag": "latest",
-    "environmentVariables": [],
+    "environmentVariables": {},
     "readme": "./README.md",
     "input": "./input_schema.json",
     "storages": {
