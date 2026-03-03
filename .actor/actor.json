@@ -8,6 +8,7 @@
     "environmentVariables": {},
     "readme": "./README.md",
     "input": "./input_schema.json",
+    "output": "./output_schema.json",
     "storages": {
         "dataset": {
             "actorSpecification": 1,

@@ -1,0 +1,13 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Backlinq SEO Intelligence Output",
+    "description": "Domain authority scores, backlink profiles, referring domains, and multi-domain comparison results.",
+    "properties": {
+        "results": {
+            "type": "string",
+            "title": "SEO Data Results",
+            "description": "Dataset containing the full JSON response from Backlinq for the queried domain(s).",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        }
+    }
+}
